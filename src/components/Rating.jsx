@@ -8,10 +8,8 @@ import { useEffect } from "react"
 export default function Rating() {
   const dispatch = useDispatch()
   const rating = useSelector(state => state.rating.value)
+  const enabled = rating > 0
 
-  useEffect(() => {
-    console.log(rating)
-  }, [rating])
 
   return (
     <div className='w-[35%] max-[850px]:w-[90%] max-[850px]:p-5 max-[850px]:rounded-[0.7rem] h-fit p-10 rounded-[2.7rem]  flex flex-col container gap-5 text-white'>
@@ -47,6 +45,8 @@ export default function Rating() {
       <button
         className='text-lg text-dgrey font-semibold bg-orange rounded-full w-full py-3 mt-4 hover:bg-white'
         onClick={() => { dispatch(setThanksDisplay(true)) }}
+        type="submit"
+        disabled = {!enabled}
       >
         SUBMIT
       </button>

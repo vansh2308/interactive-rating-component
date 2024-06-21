@@ -12,7 +12,7 @@ export default function Rating() {
 
 
   return (
-    <div className='w-[35%] max-[850px]:w-[90%] max-[850px]:p-5 max-[850px]:rounded-[0.7rem] h-fit p-10 rounded-[2.7rem]  flex flex-col container gap-5 text-white'>
+    <div className='w-[35%] max-[850px]:w-[90%] max-[850px]:p-5 max-[850px]:rounded-[0.7rem] h-fit p-10 rounded-[2.7rem]  flex flex-col container gap-5 text-white '>
 
       <div className='rounded-full bg-bubble flex items-center justify-center p-4 w-12 aspect-square'>
         <img src={starIcon} className='w-full' />

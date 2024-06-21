@@ -1,6 +1,7 @@
 
 import { useDispatch, useSelector } from "react-redux"
 import { setRating } from "../features/ratingSlice"
+import { setThanksDisplay } from "../features/thanksSlice"
 import starIcon from "../assets/icon-star.svg"
 import { useEffect } from "react"
 
@@ -34,7 +35,7 @@ export default function Rating() {
                 onClick={() => {
                   dispatch(setRating(item))
                 }}
-                style={rating == item ? {backgroundColor: "#fff", color: "#171e26"} : {} }
+                style={rating == item ? { backgroundColor: "#fff", color: "#171e26" } : {}}
               >
                 {item}
               </div>
@@ -43,7 +44,10 @@ export default function Rating() {
         }
       </div>
 
-      <button className='text-lg text-dgrey font-semibold bg-orange rounded-full w-full py-3 mt-4 hover:bg-white'>
+      <button
+        className='text-lg text-dgrey font-semibold bg-orange rounded-full w-full py-3 mt-4 hover:bg-white'
+        onClick={() => { dispatch(setThanksDisplay(true)) }}
+      >
         SUBMIT
       </button>
 
